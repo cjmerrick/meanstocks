@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/cjmerrick/meanstocks/issues"
   },
-  "homepage": "https://github.com/cjmerrick/meanstocks#readme"
+  "homepage": "https://github.com/cjmerrick/meanstocks#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "mongojs": "^2.4.0"
+  }
 }
