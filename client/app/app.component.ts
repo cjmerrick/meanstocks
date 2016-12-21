@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import {StockService} from './services/stock.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'my-app',
-  template: '<h1>Angular is functional</h1>',
+  templateUrl: 'app.component.html',
+  providers:[StockService]
 })
 
 export class AppComponent { }

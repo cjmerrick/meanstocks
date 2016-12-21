@@ -9,6 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var stock_service_1 = require("./services/stock.service");
 var AppComponent = (function () {
     function AppComponent() {
     }
@@ -16,8 +17,10 @@ var AppComponent = (function () {
 }());
 AppComponent = __decorate([
     core_1.Component({
+        moduleId: module.id,
         selector: 'my-app',
-        template: '<h1>Angular is functional</h1>',
+        templateUrl: 'app.component.html',
+        providers: [stock_service_1.StockService]
     }),
     __metadata("design:paramtypes", [])
 ], AppComponent);

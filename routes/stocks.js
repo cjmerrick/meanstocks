@@ -26,7 +26,7 @@ router.get('/stock/:id', function(req, res, next){
 //Save stock
 router.post('/stock', function(req, res, next){
     var stock = req.body;
-    if(!stock.title || !(stock.isDone + '')){
+    if(!stock.title || !(stock.isOwned + '')){
         res.status(400);
         res.json({
             "error": "Bad Data"
@@ -56,8 +56,8 @@ router.put('/stock/:id', function(req, res, next){
     var stock = req.body;
     var updStock = {};
 
-    if(stock.isDone){
-        updStock.isDone = stock.isDone;
+    if(stock.isOwned){
+        updStock.isOwned = stock.isOwned;
     }
 
     if(stock.title){
