@@ -1,6 +1,3 @@
-<h1>This is the stock component template</h1>
-
-<!--
 <form class="well" (submit)="addStock($event)">
       <div class="form-group">
         <input type="text" [(ngModel)]="title" name="title" class="form-control" placeholder="Add Stock...">
@@ -12,13 +9,18 @@
         <div class="col-md-1">
             <input type="checkbox" [checked]="stock.isOwned" (click)="updateStatus(stock)">
         </div>
-        <div class="col-md-7">
+        <div class="col-md-3">
             {{stock.title}}
         </div>
-        <div class="col-md-4">
-            <input type="button" (click)="deleteStock(stock._id)" value="Delete" class="btn btn-danger">
+        <div class="col-md-2">
+            <input type="text" placeholder="Price">
+        </div>
+        <div class="col-md-3">
+            <input type="button" (click)="deleteStock(stock._id)" value="Buy" class="btn btn-success">
+        </div>
+        <div class="col-md-3">
+            <input type="button" (click)="deleteStock(stock._id)" value="Sell" class="btn btn-danger">
         </div>
         <br><br>
     </div>
 </div>
--->
