@@ -11,6 +11,8 @@ import {Stock} from '../../Stock';
 export class StocksComponent {
     stocks: Stock[];
     title: string;
+    isOwned: boolean;
+    amount: number;
 
     constructor(private stockService:StockService){
         this.stockService.getStocks()
@@ -23,7 +25,8 @@ export class StocksComponent {
         event.preventDefault();
         var newStock = {
             title: this.title,
-            isOwned: false
+            isOwned: false,
+            amount: this.amount
         }
 
         this.stockService.addStock(newStock)
@@ -51,7 +54,8 @@ export class StocksComponent {
         var _stock = {
             _id: stock._id,
             title: stock.title,
-            isOwned: !stock.isOwned
+            isOwned: !stock.isOwned,
+            amount: stock.amount
         };
 
         this.stockService.updateStatus(_stock).subscribe(data => {

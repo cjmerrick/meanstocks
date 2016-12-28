@@ -24,7 +24,8 @@ var StocksComponent = (function () {
         event.preventDefault();
         var newStock = {
             title: this.title,
-            isOwned: false
+            isOwned: false,
+            amount: this.amount
         };
         this.stockService.addStock(newStock)
             .subscribe(function (stock) {
@@ -48,7 +49,8 @@ var StocksComponent = (function () {
         var _stock = {
             _id: stock._id,
             title: stock.title,
-            isOwned: !stock.isOwned
+            isOwned: !stock.isOwned,
+            amount: stock.amount
         };
         this.stockService.updateStatus(_stock).subscribe(function (data) {
             stock.isOwned = !stock.isOwned;
